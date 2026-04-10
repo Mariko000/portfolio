@@ -1,0 +1,90 @@
+/* src/assets/style.css */
+
+/* ------------------- */
+/* 1. CSSリセット */
+/* ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* ボックスモデルをborder-boxに設定 */
+}
+
+html {
+  scroll-behavior: smooth; /* スムーズスクロール（任意） */
+  font-size: 16px; /* 基本フォントサイズ */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;/* フォント設定 */
+  line-height: 1.6; /* 行の高さ */
+  color: #333; /* 基本の文字色 */
+  background-color: #f8f8f8; /* ページの背景色 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* リンクのデフォルト色を親要素から継承 */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* 画像の下の余白をなくす */
+}
+
+/* ------------------- */
+/* 2. 全体的なレイアウトとコンテンツの中央配置 */
+/* ------------------- */
+#app { /* Vueアプリケーションのルート要素 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ビューポートの高さ全体を占める */
+}
+
+main {
+  flex-grow: 1; /* コンテンツ領域が残りのスペースを全て占める */
+  width: 90%; /* コンテンツの最大幅を制限 */
+  max-width: 1200px; /* 最大幅 */
+  margin: 0 auto; /* 左右中央寄せ */
+  padding: 20px 0; /* 上下のパディング */
+}
+
+/* ------------------- */
+/* 3. レスポンシブ対応の基本 */
+/* ------------------- */
+/* スマートフォン (幅が600px以下) */
+@media (max-width: 600px) {
+  html {
+      font-size: 15px; /* スマートフォンでは少しフォントを小さく */
+  }
+
+  main {
+      width: 95%; /* より狭い幅に調整 */
+      padding: 15px 0;
+  }
+}
+
+/* タブレット (幅が601pxから1024pxまで) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  html {
+      font-size: 16px;
+  }
+
+  main {
+      width: 90%;
+      padding: 20px 0;
+  }
+}
+
+/* デスクトップ (幅が1025px以上) - 現状維持でもOK */
+@media (min-width: 1025px) {
+  html {
+      font-size: 17px; /* デスクトップでは少しフォントを大きく */
+  }
+
+  main {
+      width: 85%; /* さらに幅を広げることも可能 */
+      padding: 25px 0;
+  }
+}
+

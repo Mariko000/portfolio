@@ -1,0 +1,67 @@
+/* CSSリセット */
+/* 全要素のマージン＆パディングをゼロ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* リストのデフォルトマーカーを消す */
+ul, ol {
+  list-style: none;
+}
+
+/* aタグのデフォルト装飾を消す */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ボタンのデフォルト装飾を消す */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* テキストエリアのリサイズ禁止 */
+textarea {
+  resize: vertical;
+}
+
+/* 画像の下余白を消す＆レスポンシブ */
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ページ全体の基本スタイル */
+  
+body {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  p {
+    margin-bottom: 1em;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+  }
+
+  
