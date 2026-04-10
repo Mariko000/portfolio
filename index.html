@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/portfolio/assets/icon-192-new-DiQ7OZ3A.png" />
+    <link rel="apple-touch-icon" href="/portfolio/assets/icon-512-new-CAbdA0FY.png" />
+    
+    <meta name="theme-color" content="#ffffff" />
+    
+    <link rel="manifest" href="manifest.json" />
+    
+    <title>My Tools Portfolio</title>
+    <script type="module" crossorigin src="/portfolio/assets/index-xwBYVcVI.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-DGPqwn4c.css">
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+
+          navigator.serviceWorker.register('sw.js')
+            .then(() => console.log('SW registered'))
+            .catch(err => console.error('SW failed', err))
+        })
+      }
+    </script>
+  </body>
+</html>
